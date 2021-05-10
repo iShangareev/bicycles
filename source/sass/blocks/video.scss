@@ -1,0 +1,135 @@
+.video {
+  width: 100%;
+  max-height: 706px;
+  box-sizing: border-box;
+  padding: 60px 0 0;
+  background-color: $gray-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video__container {
+  position: relative;
+}
+
+.video__title {
+  margin: 60px 0 5px;
+  color: $white;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.video__description {
+  max-width: 340px;
+  color: $white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  opacity: 0.7;
+}
+
+.video__container {
+  max-width: 929px;
+  position: relative;
+  top: 40px;
+}
+
+.video__button-play {
+  width: 60px;
+  height: 60px;
+  background-color: $turquoise;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background-color: $turquoise-dark;
+    transition: 0.2s;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    border: 8px solid transparent;
+    border-left: 10px solid $black;
+  }
+}
+
+.video__container-img {
+  object-fit: cover;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .video {
+    padding: 10px 0 0;
+    max-height: 413px;
+  }
+
+  .video__container {
+    max-width: 503px;
+    top: 22px;
+  }
+
+  .video__container-img {
+    max-width: 503px;
+    height: auto;
+  }
+
+  .video__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .video__description {
+    max-width: 430px;
+  }
+
+  .video__button-play {
+    width: 90px;
+    height: 90px;
+    &::after {
+      content: "";
+      position: absolute;
+      border: 12px solid transparent;
+      border-left: 17px solid $black;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .video__container-img {
+    max-width: 288px;
+  }
+
+  .video__button-play {
+    width: 65px;
+    height: 65px;
+    &::after {
+      border: 8px solid transparent;
+      border-left: 10px solid $black;
+    }
+  }
+  .video {
+    max-height: 385px;
+    padding: 10px 10px 0;
+  }
+
+  .video__title {
+    margin: 75px 0 5px;
+  }
+
+  .video__container {
+    top: 35px;
+  }
+}

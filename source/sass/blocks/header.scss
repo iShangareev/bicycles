@@ -1,0 +1,236 @@
+.header__nav {
+  width: 100%;
+  margin: 0 0 256px 0;
+}
+
+.header__nav-list {
+  box-sizing: border-box;
+  max-width: 870px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 21px 20px 9px;
+  list-style-type: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+}
+
+.header__nav-link {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: $white;
+  opacity: 0.7;
+  text-decoration: none;
+  transition: 0.2s;
+  &:hover {
+    opacity: 1;
+    transition: 0.2s;
+  }
+}
+
+.header__nav-item {
+  &:not(:last-child) {
+    margin-right: 133px;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 68px;
+  height: 21px;
+  background-image: url("../img/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.header__promo {
+  max-width: 380px;
+  color: $white;
+}
+
+.header__title {
+  margin-bottom: 25px;
+  font-size: 46px;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+.header__promo-text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.header__menu-button {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .header__title {
+    margin-top: 90px;
+    margin-bottom: 18px;
+  }
+
+  .header__feedback {
+    margin-top: 70px;
+  }
+
+  .header__nav {
+    margin-bottom: 0;
+  }
+
+  .header__nav-list {
+    display: none;
+  }
+
+  .header__nav-list--active {
+    display: block;
+    position: fixed;
+    max-width: 100%;
+    min-width: 320px;
+    max-height: 100%;
+    padding: 100px 0 0 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    z-index: 100;
+  }
+
+  .header__info {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__nav-item {
+    padding: 17px;
+    background-color: $gray-light;
+    margin-right: 0;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $gray-lighten;
+    }
+  }
+
+  .header__nav-link {
+    display: block;
+    width: 100%;
+    color: $gray-once;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    opacity: 1;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 12px;
+      background-image: url("../img/icon-arrow.svg");
+      right: 25px;
+      top: 40%;
+      opacity: 0.8;
+    }
+  }
+
+  .header__promo {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 25px 25px 80px 21px;
+    background-image: url("../img/promo@2x.jpg");
+    background-color: $gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  .header__promo-text {
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .header__title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .header__menu-button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background-color: $turquoise;
+    border: none;
+    z-index: 101;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background-color: $turquoise-dark;
+      transition: 0.2s;
+    }
+  }
+
+  .header__menu-button {
+    & .header__menu-button-svg--close {
+      display: none;
+    }
+  }
+
+  .header__menu-button--open {
+    position: fixed;
+    background-color: $white;
+    & .header__menu-button-svg {
+      display: none;
+    }
+    & .header__menu-button-svg--close {
+      display: block;
+      margin: auto;
+    }
+    &:hover {
+      background-color: $gray-lighten;
+    }
+  }
+
+  .header__nav-list--no-js {
+    max-width: 100%;
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 50px 0 0;
+    & ~ .header__menu-button {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header__promo {
+    padding: 25px 16px 70px;
+  }
+
+  .header__title {
+    margin-top: 75px;
+  }
+}

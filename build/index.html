@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bicycles</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <svg display="none">
+      <symbol id="icon-menu" viewBox="0 0 24 14">
+        <g>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M.75 14h22.5v-1H.75v1zm0-6.25h22.5v-1H.75v1zM.75.5v1h22.5v-1H.75z" fill="#000"></path>
+        </g>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 22 23">
+        <g>
+          <path d="M1 23.721L23 1m0 22.721L1 1" stroke="#141517" stroke-opacity=".2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+      </symbol>
+    </svg>
+    <div class="wrapper">
+      <header class="wrapper__header header">
+        <nav class="header__nav">
+          <ul class="header__nav-list header__nav-list--no-js">
+            <li class="header__nav-item">
+              <a href="#about" class="header__nav-link">О нас</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#types" class="header__nav-link">Виды велосипедов</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#video" class="header__nav-link">Видео про велосипеды</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contacts" class="header__nav-link">Контакты</a>
+            </li>
+          </ul>
+          <button class="header__menu-button">
+            <svg class="header__menu-button-svg" width="24" height="14">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+            <svg class="header__menu-button-svg header__menu-button-svg--close" width="22" height="23">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </nav>
+        <section class="header__info">
+          <div class="header__promo">
+            <a href="#" class="header__logo"></a>
+            <h1 class="header__title">Мы продаем велосипеды</h1>
+            <p class="header__promo-text">
+              Наш магазин отбирает только самые лучшие велосипеды для продажи
+            </p>
+          </div>
+          <div class="header__feedback feedback">
+            <p class="feedback__description">
+              Заполните поля ниже и мы подберем велосипед Вашей мечты
+            </p>
+            <form action="#" class="feedback__form">
+              <div class="feedback__input-field">
+                <label>
+                  <span class="visually-hidden">Имя</span>
+                  <input type="text" name="name" placeholder="Введите ваше имя" required="">
+                </label>
+              </div>
+              <div class="feedback__input-field">
+                <label>
+                  <span class="visually-hidden">Имя</span>
+                  <input type="tel" name="phone" placeholder="Введите Ваш номер телефона" pattern="[0-9]{10,11}" required="">
+                </label>
+              </div>
+              <button class="feedback__form-button" type="submit">
+                Подобрать велосипед мечты
+              </button>
+            </form>
+          </div>
+        </section>
+      </header>
+      <main class="wrapper__main">
+        <section class="about" id="about">
+          <h2 class="about__title">Несколько фактов о нас</h2>
+          <ul class="about__list">
+            <li class="about__list-item">
+              <p class="about__list-item-text">
+                Самый широкий выбор велосипедов!
+              </p>
+            </li>
+            <li class="about__list-item">
+              <p class="about__list-item-text">
+                Доставка велосипедов по всей России!
+              </p>
+            </li>
+            <li class="about__list-item">
+              <p class="about__list-item-text">
+                Большой выбор крутых аксессуаров!
+              </p>
+            </li>
+            <li class="about__list-item">
+              <p class="about__list-item-text">
+                Профессиональные консультации!
+              </p>
+            </li>
+          </ul>
+        </section>
+        <section class="types" id="types">
+          <h2 class="types__title">Виды велосипедов</h2>
+          <ul class="types__list">
+            <li class="types__list-item">
+              <a href="#" class="types__link">
+                <picture>
+                  <img class="types__link-img" src="img/road-bike@1x.jpg" alt="Дорожный велосипед" srcset="img/road-bike@2x.jpg" width="342" height="503">
+                </picture>
+                <h3 class="types__link-title">Дорожный велосипед</h3>
+              </a>
+            </li>
+            <li class="types__list-item">
+              <a href="#" class="types__link">
+                <picture>
+                  <img class="types__link-img" src="img/mount-bike@1x.jpg" alt="Горный велосипед" srcset="img/mount-bike@2x.jpg" width="342" height="503">
+                  <picture>
+                    <h3 class="types__link-title">Горный велосипед</h3>
+              </picture></picture></a>
+            </li>
+            <li class="types__list-item">
+              <a href="#" class="types__link">
+                <picture>
+                  <img class="types__link-img" src="img/kids-bike@1x.jpg" alt="Детский велосипед" srcset="img/kids-bike@2x.jpg" width="342" height="503">
+                </picture>
+                <h3 class="types__link-title">Детский велосипед</h3>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="video" id="video">
+          <h2 class="video__title">
+            Видео про велосипеды
+          </h2>
+          <p class="video__description">
+            В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.
+          </p>
+          <div class="video__container">
+            <picture>
+              <img class="video__container-img" src="img/video@1x.jpg" alt="Видео про велосипеды" srcset="img/video@2x.jpg" width="929" height="522">
+            </picture>
+            <button type="button" class="video__button-play" aria-label="Воспроизвести видео"></button>
+          </div>
+        </section>
+      </main>
+      <footer class="wrapper__footer footer" id="contacts">
+        <h2 class="footer__title">Как нас найти?</h2>
+        <p class="footer__address">
+          Мы находимся по адресу: Санкт‑Петербург, ул. Большая Конюшенная, д. 19
+        </p>
+        <section class="footer__map map">
+          <iframe class="footer__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1620394254092!5m2!1sru!2sru" width="957" height="530" style="border: 0" allowfullscreen="" loading="lazy" title="Офис компании по адресу Санкт‑Петербург, ул. Большая Конюшенная, д. 19"></iframe>
+        </section>
+        <section class="footer__contacts contacts">
+          <a href="mailto:puteshestviemechta@gmail.ru" class="contacts__links contacts__links--mail">
+            puteshestviemechta@gmail.ru
+          </a>
+          <a href="tel:+749978468446" class="contacts__links contacts__links--phone">
+            +7 (499) -784-684-46
+          </a>
+        </section>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

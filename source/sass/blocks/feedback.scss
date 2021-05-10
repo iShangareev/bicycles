@@ -1,0 +1,82 @@
+.feedback {
+  max-width: 327px;
+  color: $white;
+}
+
+.feedback__description {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.feedback__input-field input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 17px 29px 12px;
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 1px solid $gray-lighten;
+  border-radius: 6px;
+  &::placeholder {
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 24px;
+    color: $gray;
+    opacity: 0.5;
+  }
+  &:hover {
+    border: 1px solid $turquoise;
+  }
+}
+
+.feedback__form-button {
+  width: 100%;
+  height: 51px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 21px;
+  background-color: $turquoise;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background-color: $turquoise-dark;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1023px) {
+  .feedback {
+    max-width: 324px;
+  }
+
+  .feedback__description {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $black;
+  }
+  .feedback__input-field {
+    & input {
+      padding: 14px 22px 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .feedback__description {
+    margin-bottom: 21px;
+  }
+
+  .feedback__form {
+    max-width: 288px;
+    margin: 0 auto;
+  }
+}
