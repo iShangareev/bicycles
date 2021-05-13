@@ -1,5 +1,5 @@
 .contacts {
-  max-width: 530px;
+  max-width: 570px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -22,14 +22,14 @@
 
 .contacts__links--mail {
   position: relative;
-  padding-left: 25px;
+  padding-left: 45px;
   &::before {
     content: "";
     position: absolute;
     width: 26px;
     height: 20px;
+    left: 0;
     background-image: url("../img/icon-email.svg");
-    left: -15px;
     background-position: center;
     background-repeat: no-repeat;
   }
@@ -37,19 +37,21 @@
 
 .contacts__links--phone {
   position: relative;
+  padding-left: 35px;
+  margin-right: 20px;
   &::before {
     content: "";
     position: absolute;
     width: 22px;
     height: 22px;
     background-image: url("../img/icon-phone.svg");
-    left: -37px;
+    left: 0;
     background-position: center;
     background-repeat: no-repeat;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .contacts {
     max-width: 250px;
     flex-direction: column;

@@ -14,14 +14,14 @@
 .feedback__input-field input {
   box-sizing: border-box;
   width: 100%;
-  padding: 17px 29px 12px;
+  padding: 17px 29px 11px;
   margin-bottom: 20px;
   background-color: $white;
   border: 1px solid $gray-lighten;
   border-radius: 6px;
-
+  line-height: 1.2;
   &::placeholder {
-    font-family: "Open Sans";
+    font-family: inherit;
     font-size: 15px;
     line-height: 24px;
     color: $gray;
@@ -51,7 +51,7 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $tablet-width) {
   .feedback {
     max-width: 324px;
   }
@@ -65,13 +65,13 @@
     color: $black;
   }
   .feedback__input-field {
-    & input {
+    input {
       padding: 14px 22px 14px;
     }
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .feedback__description {
     margin-bottom: 21px;
   }

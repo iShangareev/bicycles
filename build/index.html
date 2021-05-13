@@ -8,6 +8,8 @@
     <title>Bicycles</title>
     <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -51,7 +53,9 @@
         </nav>
         <section class="header__info">
           <div class="header__promo">
-            <a class="header__logo" aria-label="Логотип Moon"></a>
+            <a class="header__logo" aria-label="Логотип Moon">
+              <img class="logo__image" src="./img/logo.svg" loading="lazy" width="69" height="21" alt="Логотип компании Moon: Мы продаем велосипеды">
+            </a>
             <h1 class="header__title">Мы продаем велосипеды</h1>
             <p class="header__promo-text">
               Наш магазин отбирает только самые лучшие велосипеды для продажи
@@ -70,8 +74,8 @@
               </div>
               <div class="feedback__input-field">
                 <label>
-                  <span class="visually-hidden">Имя</span>
-                  <input type="tel" name="phone" placeholder="Введите Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="" title="+71234567890 ">
+                  <span class="visually-hidden">Телефон</span>
+                  <input class="feedback__input-phone" type="tel" name="phone" placeholder="Введите Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="" title="+71234567890 ">
                 </label>
               </div>
               <button class="feedback__form-button" type="submit">
@@ -85,26 +89,12 @@
         <section class="about" id="about">
           <h2 class="about__title">Несколько фактов о нас</h2>
           <ul class="about__list">
+            <li class="about__list-item">Самый широкий выбор велосипедов!</li>
             <li class="about__list-item">
-              <p class="about__list-item-text">
-                Самый широкий выбор велосипедов!
-              </p>
+              Доставка велосипедов по всей России!
             </li>
-            <li class="about__list-item">
-              <p class="about__list-item-text">
-                Доставка велосипедов по всей России!
-              </p>
-            </li>
-            <li class="about__list-item">
-              <p class="about__list-item-text">
-                Большой выбор крутых аксессуаров!
-              </p>
-            </li>
-            <li class="about__list-item">
-              <p class="about__list-item-text">
-                Профессиональные консультации!
-              </p>
-            </li>
+            <li class="about__list-item">Большой выбор крутых аксессуаров!</li>
+            <li class="about__list-item">Профессиональные консультации!</li>
           </ul>
         </section>
         <section class="types" id="types">
@@ -112,34 +102,48 @@
           <ul class="types__list">
             <li class="types__list-item">
               <a href="#" class="types__link">
-                <picture>
-                  <source type="image/webp" srcset="img/road-bike@1x.webp 1x, img/road-bike@2x.webp 2x">
-                  <!-- (in height) 1х: 503px; 2x: 1006px -->
-                  <img class="types__link-img" src="img/road-bike@1x.jpg" alt="Дорожный велосипед" srcset="img/road-bike@2x.jpg" width="342" height="503">
-                </picture>
+                <div class="types__link__img-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="
+                        ./img/road-bike@1x.webp 1x,
+                        ./img/road-bike@2x.webp 2x
+                      ">
+                    <!-- (in height) 1х: 503px; 2x: 1006px -->
+                    <img class="types__link-img" src="img/road-bike1x.jpg" srcset="img/road-bike2x.jpg 2x" width="342" height="503" loading="lazy" alt="Дорожный велосипед">
+                  </picture>
+                </div>
+
                 <h3 class="types__link-title">Дорожный велосипед</h3>
               </a>
             </li>
             <li class="types__list-item">
               <a href="#" class="types__link">
-                <picture>
-                  <source type="image/webp" srcset="
-                      img/mount-bike@1x.webp 1x,
-                      img/mount-bike@2x.webp 2x
-                    ">
-                  <!-- (in height) 1х: 503px; 2x: 1006px -->
-                  <img class="types__link-img" src="img/mount-bike@1x.jpg" alt="Горный велосипед" srcset="img/mount-bike@2x.jpg" width="342" height="503">
-                </picture>
+                <div class="types__link__img-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="
+                        ./img/mount-bike@1x.webp 1x,
+                        ./img/mount-bike@2x.webp 2x
+                      ">
+                    <!-- (in height) 1х: 503px; 2x: 1006px -->
+                    <img class="types__link-img" src="img/mount-bike1x.jpg" srcset="img/mount-bike2x.jpg 2x" width="342" height="503" loading="lazy" alt="Горный велосипед">
+                  </picture>
+                </div>
+
                 <h3 class="types__link-title">Горный велосипед</h3>
               </a>
             </li>
             <li class="types__list-item">
               <a href="#" class="types__link">
-                <picture>
-                  <source type="image/webp" srcset="img/kids-bike@1x.webp 1x, img/kids-bike@2x.webp 2x">
-                  <!-- (in height) 1х: 503px; 2x: 1006px -->
-                  <img class="types__link-img" src="img/kids-bike@1x.jpg" alt="Детский велосипед" srcset="img/kids-bike@2x.jpg" width="342" height="503">
-                </picture>
+                <div class="types__link__img-wrapper">
+                  <picture>
+                    <source type="image/webp" srcset="
+                        img/kids-bike@1x.webp 1x,
+                        img/kids-bike@2x.webp 2x
+                      ">
+                    <!-- (in height) 1х: 503px; 2x: 1006px -->
+                    <img class="types__link-img" src="img/kids-bike1x.jpg" srcset="img/kids-bike2x.jpg 2x" width="342" height="503" loading="lazy" alt="Детский велосипед">
+                  </picture>
+                </div>
                 <h3 class="types__link-title">Детский велосипед</h3>
               </a>
             </li>
@@ -153,9 +157,9 @@
           </p>
           <div class="video__container">
             <picture>
-              <source type="image/webp" srcset="img/video@1x.webp 1x, img/video@2x.webp 2x">
+              <source type="image/webp" srcset="./img/video@1x.webp 1x, ./img/video@2x.webp 2x">
               <!-- (in weight) 1х: 929px; 2x: 1858px -->
-              <img class="video__container-img" src="img/video@1x.jpg" alt="Видео про велосипеды" srcset="img/video@2x.jpg" width="929" height="522">
+              <img class="video__container-img" width="929" height="522" src="img/video1x.jpg" srcset="img/video2x.jpg 2x" loading="lazy" alt="Видео про велосипеды">
             </picture>
             <button type="button" class="video__button-play" aria-label="Воспроизвести видео"></button>
           </div>
@@ -179,6 +183,7 @@
         </div>
       </footer>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/imask.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

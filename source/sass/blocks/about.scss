@@ -1,8 +1,10 @@
 .about {
-  padding: 130px 0 115px;
+  padding: 150px 0 135px;
 }
 
 .about__title {
+  max-width: 50%;
+  margin: 0 auto;
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -11,11 +13,12 @@
 }
 
 .about__list {
-  margin-top: 40px;
+  max-width: 1158px;
+  width: 100%;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  gap: 38px;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0;
   counter-reset: section;
   list-style-type: none;
@@ -24,7 +27,12 @@
 .about__list-item {
   display: flex;
   flex-direction: column;
-  max-width: 263px;
+  max-width: 22%;
+  font-size: 22px;
+  line-height: 34px;
+  color: $black;
+  text-align: center;
+  letter-spacing: -0.5px;
   &::before {
     counter-increment: section;
     content: "0" counter(section);
@@ -34,22 +42,20 @@
     font-weight: 700;
     text-align: center;
     position: relative;
-    top: 10px;
+    margin-bottom: 15px;
   }
 }
 
-.about__list-item-text {
-  font-size: 22px;
-  line-height: 34px;
-  color: $black;
-  text-align: center;
-  letter-spacing: -0.5px;
+@media (max-width: $desktop-width-one) {
+  .about__list-item {
+    max-width: 250px;
+  }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $tablet-width) {
   .about {
     max-width: 590px;
-    padding: 50px 0 30px;
+    padding: 70px 0 55px;
   }
 
   .about__title {
@@ -59,25 +65,36 @@
   }
 
   .about__list {
+    justify-content: center;
     margin-top: 0;
-    column-gap: 30px;
-    row-gap: 5px;
+    column-gap: 45px;
+    row-gap: 15px;
   }
 
-  .about__list-item-text {
+  .about__list-item {
     margin-top: 28px;
     font-size: 22px;
     line-height: 34px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-width) {
   .about {
-    padding: 50px 0 45px;
+    padding: 70px 0 45px;
   }
 
-  .about__list-item-text {
+  .about__title {
+    max-width: 100%;
+  }
+
+  .about__list {
+    margin-top: 30px;
+  }
+
+  .about__list-item {
+    max-width: 260px;
     font-size: 18px;
     line-height: 34px;
+    margin: 0 0 20px;
   }
 }
