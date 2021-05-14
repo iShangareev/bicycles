@@ -22,6 +22,7 @@
   opacity: 0.7;
   text-decoration: none;
   transition: 0.2s;
+
   &:hover {
     opacity: 1;
     transition: 0.2s;
@@ -83,6 +84,8 @@
     max-width: 80%;
     margin: 0 auto;
     padding-bottom: 19px;
+    font-size: 30px;
+    line-height: 42px;
   }
 
   .header__logo {
@@ -130,9 +133,11 @@
     margin-bottom: 30px;
     position: relative;
     cursor: pointer;
+
     &:not(:last-child) {
       margin-right: 0;
     }
+
     &:hover {
       background-color: $gray-lighten;
     }
@@ -147,6 +152,7 @@
     line-height: 26px;
     opacity: 1;
     padding: 17px;
+
     &::after {
       content: "";
       position: absolute;
@@ -179,11 +185,6 @@
     line-height: 32px;
   }
 
-  .header__title {
-    font-size: 30px;
-    line-height: 42px;
-  }
-
   .header__menu-button {
     display: block;
     position: absolute;
@@ -196,13 +197,12 @@
     z-index: 101;
     cursor: pointer;
     transition: 0.2s;
+
     &:hover {
       background-color: $turquoise-dark;
       transition: 0.2s;
     }
-  }
 
-  .header__menu-button {
     .header__menu-button-svg--close {
       display: none;
     }
@@ -211,13 +211,16 @@
   .header__menu-button--open {
     position: fixed;
     background-color: $white;
+
     .header__menu-button-svg {
       display: none;
     }
+
     .header__menu-button-svg--close {
       display: block;
       margin: auto;
     }
+
     &:hover {
       background-color: $gray-lighten;
     }
@@ -229,6 +232,7 @@
     position: relative;
     height: auto;
     padding: 50px 0 0;
+
     ~ .header__menu-button {
       display: none;
     }

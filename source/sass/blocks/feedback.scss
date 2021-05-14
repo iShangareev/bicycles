@@ -20,6 +20,7 @@
   border: 1px solid $gray-lighten;
   border-radius: 6px;
   line-height: 1.2;
+
   &::placeholder {
     font-family: inherit;
     font-size: 15px;
@@ -27,6 +28,7 @@
     color: $gray;
     opacity: 0.5;
   }
+
   &:hover {
     border: 1px solid $turquoise;
   }
@@ -45,6 +47,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: 0.2s;
+
   &:hover {
     background-color: $turquoise-dark;
     transition: 0.2s;
@@ -64,6 +67,7 @@
     line-height: 28px;
     color: $black;
   }
+
   .feedback__input-field {
     input {
       padding: 14px 22px 14px;

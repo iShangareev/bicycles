@@ -10,6 +10,7 @@
 }
 
 .video__title {
+  max-width: 929px;
   margin: 0 0 20px;
   color: $white;
   font-weight: 600;
@@ -47,10 +48,12 @@
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s;
+
   &:hover {
     background-color: $turquoise-dark;
     transition: 0.2s;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -84,6 +87,7 @@
   }
 
   .video__title {
+    max-width: 503px;
     font-size: 24px;
     line-height: 30px;
   }
@@ -95,6 +99,7 @@
   .video__button-play {
     width: 90px;
     height: 90px;
+
     &::after {
       content: "";
       position: absolute;
@@ -112,11 +117,13 @@
   .video__button-play {
     width: 65px;
     height: 65px;
+
     &::after {
       border: 8px solid transparent;
       border-left: 10px solid $black;
     }
   }
+
   .video {
     max-height: 385px;
     padding: 85px 10px 0;

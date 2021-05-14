@@ -1,14 +1,12 @@
 "use strict";
 
-(function menuListeners() {
+(function () {
   const menuToggle = document.querySelector(".header__menu-button");
   const headerMenu = document.querySelector(".header__nav-list");
   const pageWrapper = document.querySelector(".wrapper");
+  const inputPhone = document.querySelector(".feedback__input-phone");
 
-  if (
-    menuToggle.classList.contains("header__menu-button") &&
-    headerMenu.classList.contains("header__nav-list")
-  ) {
+  if (menuToggle && headerMenu) {
     headerMenu.classList.remove("header__nav-list--no-js");
 
     menuToggle.addEventListener("click", function () {
@@ -36,13 +34,12 @@
       });
     }
   }
-})();
 
-(function inputMasks() {
-  const inputPhone = document.querySelector(".feedback__input-phone");
   const maskOptions = {
     mask: "+{7}(000)000-00-00",
   };
 
-  IMask(inputPhone, maskOptions);
+  if (inputPhone) {
+      IMask(inputPhone, maskOptions);
+  }
 })();

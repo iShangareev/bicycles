@@ -4,7 +4,7 @@
 }
 
 .footer__title {
-  max-width: 50%;
+  max-width: 929px;
   margin: 0 auto;
   font-weight: 600;
   font-size: 30px;
@@ -27,7 +27,7 @@
 }
 
 .footer__contacts {
-  margin: 36px auto 0px;
+  margin: 36px auto 0;
 }
 
 @media (max-width: $tablet-width) {
@@ -41,6 +41,7 @@
   }
 
   .footer__title {
+    max-width: 698px;
     font-weight: 600;
     font-size: 24px;
     line-height: 30px;
@@ -52,7 +53,7 @@
   }
 
   .footer__contacts {
-    margin: 35px auto 0px;
+    margin: 35px auto 0;
   }
 }
 
