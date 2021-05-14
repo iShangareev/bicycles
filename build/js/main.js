@@ -43,5 +43,3 @@
       IMask(inputPhone, maskOptions);
   }
 })();
-
-
