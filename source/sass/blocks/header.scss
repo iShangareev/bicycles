@@ -32,6 +32,22 @@
 
 .header__nav-item {
   margin: 0 5px;
+
+  &:last-child {
+    margin-right: auto;
+  }
+
+  &:nth-child(4) {
+    margin-right: 5px;
+  }
+
+  &:nth-child(5) {
+    margin-right: 5px;
+  }
+
+  &:nth-child(6) {
+    margin-right: 5px;
+  }
 }
 
 .header__logo {
@@ -140,7 +156,6 @@
 
   .header__nav-link {
     display: block;
-    width: 100%;
     color: $gray-once;
     font-weight: 400;
     font-size: 20px;
