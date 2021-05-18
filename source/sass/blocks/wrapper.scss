@@ -1,4 +1,7 @@
 .wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: $main-font;
 }
 
@@ -21,14 +24,17 @@
 }
 
 .wrapper__main {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.wrapper__video {
+  margin-bottom: 250px;
+}
+
 .wrapper__footer {
-  margin-top: 250px;
+  margin-top: auto;
 }
 
 @media (max-width: $tablet-width) {
@@ -38,13 +44,13 @@
     padding-bottom: 0;
   }
 
-  .wrapper__footer {
-    margin-top: 155px;
+  .wrapper__video {
+    margin-bottom: 155px;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .wrapper__footer {
-    margin-top: 116px;
+  .wrapper__video {
+    margin-bottom: 120px;
   }
 }

@@ -5,9 +5,10 @@
 
 .header__nav-list {
   box-sizing: border-box;
-  max-width: 870px;
+  max-width: 885px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 21px 20px 9px;
   list-style-type: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -30,9 +31,7 @@
 }
 
 .header__nav-item {
-  &:not(:last-child) {
-    margin-right: 133px;
-  }
+  margin: 0 5px;
 }
 
 .header__logo {
@@ -118,6 +117,7 @@
     left: 0;
     background-color: $white;
     z-index: 100;
+    overflow-y: auto;
   }
 
   .header__info {
@@ -129,14 +129,9 @@
 
   .header__nav-item {
     background-color: $gray-light;
-    margin-right: 0;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
     position: relative;
     cursor: pointer;
-
-    &:not(:last-child) {
-      margin-right: 0;
-    }
 
     &:hover {
       background-color: $gray-lighten;
